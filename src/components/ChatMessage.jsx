@@ -1,8 +1,10 @@
-import React from 'react'
-import { auth } from '../services/firebase'
+
+import { auth } from '../services/firebase';
+
 
 const ChatMessage = ({message}) => {
-    const { text, uid , photoURL } = message;
+
+    const { text, uid , photoURL, displayName} = message;
 
     const messageClass = uid === auth().currentUser.uid ? 'sent' : 'received'
 
@@ -10,6 +12,8 @@ const ChatMessage = ({message}) => {
         <div className={`message ${messageClass}`}>
             <img src={photoURL || "https://hhp-blog.s3.amazonaws.com/2017/05/iStock-611786974-300x300.jpg"} />
             <p>{text}</p>
+            <p>{displayName}</p>
+            
             
 
         </div>

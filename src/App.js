@@ -6,11 +6,11 @@ import SignIn from './components/SignIn'
 import SignOut from './components/SignOut'
 import Chat from './components/Chat'
 
-
 import './App.css';
 
 function App() {
   const[user] = useAuthState(auth());
+  console.log(user)
   return (
     <div className="App">
       <header>

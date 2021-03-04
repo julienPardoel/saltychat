@@ -5,7 +5,7 @@ import ChatMessage from './ChatMessage'
 
 const Chat = () => {
     const messagesRef = db.collection('messages');
-    const query = messagesRef.orderBy('createAt').limitToLast(25);
+    const query = messagesRef.orderBy('createdAt').limitToLast(25);
 
 
     const [messages] = useCollectionData(query, { idField: 'id' });
@@ -13,11 +13,11 @@ const Chat = () => {
 
     const sendMessage = async(e) => {
         e.preventDefault();
-        const {uid, photoURL} = auth().currentUser;
+        const {uid, photoURL, displayName} = auth().currentUser;
         await messagesRef.add({
             text:formValue,
-            createAt:firebase.firestore.FieldValue.serverTimestamp(),
-            uid, photoURL
+            createdAt:firebase.firestore.FieldValue.serverTimestamp(),
+            uid, photoURL, displayName
 
         })
 
