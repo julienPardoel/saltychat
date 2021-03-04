@@ -36,3 +36,41 @@
     transform: rotate(360deg);
   }
 }
+
+.App>header>img{
+  width:10%;
+  animation: sel infinite 0.3s;
+  
+  
+}
+
+@keyframes sel {
+  from {
+    transform: translateY(0px);
+    /* transform: ; */
+  }
+  to {
+    transform: translateY(-10px);
+    /* transform: ; */
+  }
+}
+
+.App>header{
+  margin: 20px;
+}
+
+.message{
+  display: flex;
+  justify-content: space-between;
+  margin: 0 200px 10px 200px;
+  border: solid 1px black;
+  background-color: rgb(211, 211, 211);
+}
+
+.message>img{
+  width: 50px;
+}
+
+.message>p{
+  padding-right: 5px;
+}
