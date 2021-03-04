@@ -11,11 +11,8 @@ const ChatMessage = ({message}) => {
     return (
         <div className={`message ${messageClass}`}>
             <img src={photoURL || "https://hhp-blog.s3.amazonaws.com/2017/05/iStock-611786974-300x300.jpg"} />
+            <h3>{displayName}</h3>
             <p>{text}</p>
-            <p>{displayName}</p>
-            
-            
-
         </div>
     )
 }

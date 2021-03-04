@@ -1,7 +1,6 @@
-import React, { useState, useEffect, useRef } from 'react'
-import { auth, db } from './services/firebase'
+import React from 'react'
+import { auth } from './services/firebase'
 import { useAuthState } from 'react-firebase-hooks/auth'
-import { useCollectionData } from 'react-firebase-hooks/firestore'
 import SignIn from './components/SignIn'
 import SignOut from './components/SignOut'
 import Chat from './components/Chat'
@@ -14,13 +13,17 @@ function App() {
   return (
     <div className="App">
       <header>
-        <h1>Welcome to SaltyChat</h1>
+        <h1>Bienvenue sur SaltyChat</h1>
         <img src="salt-shaker.png" alt=""/>
+        {/* <p className="userName">Vous êtes connecté(e) en tant que :<br/>{user.displayName}</p> */}
         <SignOut />
       </header>
       <section>
         {user ? <Chat /> : <SignIn />}
       </section>
+      <footer>
+        <p>© CopyLeft - Tout gauche reservés</p>
+      </footer>
     </div>
   );
 }

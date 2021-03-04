@@ -69,8 +69,68 @@
 
 .message>img{
   width: 50px;
+  height: 50px;
 }
 
 .message>p{
-  padding-right: 5px;
+  padding: 10px;
+  word-break: break-all;
+  width: 1000px
+}
+
+.message>h3 {
+  width: 200px
+}
+
+.inputText {
+  padding: 10px;
+  width: 500px;
+  border-radius: 10px;
+}
+
+.btnSend{
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  align-self: center;
+}
+
+.btnSend:hover{
+  cursor: pointer;
+  border: dashed 2px black;
+}
+
+
+.btnSend>img{
+  width: 30px;
+}
+
+.btnSend>img:hover{
+  animation: btnSalt 0.3s infinite;
+}
+
+@keyframes btnSalt {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(-2px);
+  }
+}
+
+form {
+  height: 50px;
+  display: flex;
+  justify-content: space-evenly;
+  width: 50%;
+  margin: auto
+}
+
+.userName{
+  font-size: xx-large;
+}
+
+main{
+  overflow: auto;
+  height: 400px
 }
